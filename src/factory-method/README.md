@@ -71,9 +71,11 @@ classDiagram
 
 ```
 
-<div align="center">
-![Factory Method](./images/mermaid.png)
-</div>
+<p align="center">
+  
+  ![Factory Method](./images/mermaid.png)
+
+</p>
 
 
 ## Snippet
