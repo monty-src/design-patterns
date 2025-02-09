@@ -2,6 +2,8 @@
 # Factory Method
 
 
+#### File Structure
+
 ```bash
 📦 src/factory-method
  ┣ 📜 factory-method.ts
@@ -10,6 +12,13 @@
  ┣ 📜 factoryMethod.test.ts
  ┣ 📜 factoryNotification.test.ts
 ```
+
+#### Test
+
+```bash
+npm run test:factory-method
+```
+
 
 ## Breakdown
 
@@ -32,7 +41,9 @@
 - :no_entry_sign: **You want to allow for future changes:** If you're designing a system that might need to handle new types of objects in the future, the Factory Method gives you the flexibility to introduce those changes without modifying existing client code.
 - :no_entry_sign: **You want to reduce complexity:** The Factory Method provides a way to isolate the complex logic of creating objects in one place, making your client code cleaner and easier to maintain.
 
-## Class Architecture
+## Example
+
+### Class Architecture
 
 ```mermaid
 classDiagram
@@ -73,7 +84,7 @@ classDiagram
   FactorySMSNotificationCreator --> FactorySMSNotification : creates
 ```
 
-## Code - Snippet
+### Code - Snippet
 
 ```ts
 /**
@@ -195,10 +206,3 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
   smsCreator.notifyUser("Your package will be delivered today.");
 })();
 ```
-
-## Test
-
-```bash
-npm run test:factory-method
-```
-
