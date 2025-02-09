@@ -35,8 +35,8 @@
 ### Architecture Snippet
 
 [Mermaid Live Editor](https://mermaid.live/)
-
-```bash
+```md
+```mermaid
 classDiagram
     class iFactoryNotification {
         <<interface>>
@@ -75,7 +75,7 @@ classDiagram
     FactorySMSNotificationCreator --> FactorySMSNotification : creates
 
 ```
-
+```
 
 ## Code - Snippet
 
