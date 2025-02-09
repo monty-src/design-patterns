@@ -29,6 +29,8 @@
 
 [Mermaid Live Editor](https://mermaid.live/)
 
+### Diagram
+
 ```bash
 classDiagram
     class iFactoryNotification {
@@ -69,7 +71,9 @@ classDiagram
 
 ```
 
+<div align="center">
 ![Factory Method](./images/mermaid.png)
+</div>
 
 
 ## Snippet
