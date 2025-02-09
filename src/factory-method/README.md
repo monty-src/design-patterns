@@ -36,11 +36,6 @@
 
 [Mermaid Live Editor](https://mermaid.live/)
 
-```mermaid
-pie
-"Movies" : 80
-"TV shows" : 20
-```
 
 ```mermaid
 classDiagram
