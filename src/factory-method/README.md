@@ -1,7 +1,6 @@
 
 # Factory Method
 
-![Factory Method](./images/mermaid.png)
 
 ## Breakdown
 
@@ -23,6 +22,54 @@
 - :no_entry_sign: **You want to manage object creation centrally:** If your codebase needs to create objects that might have a variety of implementations, but you want to centralize their creation logic, the Factory Method allows you to do this without altering client code.
 - :no_entry_sign: **You want to allow for future changes:** If you're designing a system that might need to handle new types of objects in the future, the Factory Method gives you the flexibility to introduce those changes without modifying existing client code.
 - :no_entry_sign: **You want to reduce complexity:** The Factory Method provides a way to isolate the complex logic of creating objects in one place, making your client code cleaner and easier to maintain.
+
+## Class Architecture
+
+### Mermaid
+
+```mermaid
+```mermaid
+classDiagram
+    class iFactoryNotification {
+        <<interface>>
+        +send(message: string): void
+    }
+
+    class FactoryNotificationCreatorFactory {
+        <<abstract>>
+        +createNotification(): iFactoryNotification
+        +notifyUser(message: string): void
+    }
+
+    class FactoryEmailNotification {
+        +send(message: string): void
+    }
+
+    class FactoryEmailNotificationCreator {
+        +createNotification(): iFactoryNotification
+    }
+
+    class FactorySMSNotification {
+        +send(message: string): void
+    }
+
+    class FactorySMSNotificationCreator {
+        +createNotification(): iFactoryNotification
+    }
+
+    iFactoryNotification <|-- FactoryEmailNotification
+    iFactoryNotification <|-- FactorySMSNotification
+
+    FactoryNotificationCreatorFactory <|-- FactoryEmailNotificationCreator
+    FactoryNotificationCreatorFactory <|-- FactorySMSNotificationCreator
+
+    FactoryEmailNotificationCreator --> FactoryEmailNotification : creates
+    FactorySMSNotificationCreator --> FactorySMSNotification : creates
+
+```
+
+![Factory Method](./images/mermaid.png)
+
 
 ## Snippet
 
