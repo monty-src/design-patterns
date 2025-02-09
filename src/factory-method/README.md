@@ -1,6 +1,16 @@
 
 # Factory Method
 
+
+```bash
+📦 src/factory-method
+ ┣ 📜 factory-method.ts
+ ┣ 📜 README.md
+📦 test/factory-method
+ ┣ 📜 factoryMethod.test.ts
+ ┣ 📜 factoryNotification.test.ts
+```
+
 ## Breakdown
 
 ### Key Points
@@ -189,6 +199,5 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
 ## Test
 
 ```bash
-npm i --verbose
 npm run test:factory-method
 ```
