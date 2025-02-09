@@ -5,7 +5,6 @@
 
 ```bash
 📦 src/factory-method
- ┣ 📂 images
  ┣ 📜 factory-method.ts
  ┣ 📜 README.md
 📦 test/factory-method
