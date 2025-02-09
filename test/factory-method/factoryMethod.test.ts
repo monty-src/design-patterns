@@ -2,7 +2,7 @@ import { expect } from "chai";
 
 import { iFactoryNotification, FactoryEmailNotificationCreator, FactorySMSNotificationCreator } from "../../src/factory-method/factory-method";
 
-describe("Factory Method Design Pattern", () => {
+describe("Factory Method Test - Design Pattern", () => {
   it("should create an instance of FactoryEmailNotification using the FactoryEmailNotificationCreator", () => {
     const emailCreator = new FactoryEmailNotificationCreator();
     const emailNotification: iFactoryNotification = emailCreator.createNotification();

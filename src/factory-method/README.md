@@ -1,7 +1,6 @@
 
 # Factory Method
 
-
 ## Breakdown
 
 ### Key Points
@@ -199,4 +198,12 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
   const smsCreator = new FactorySMSNotificationCreator();
   smsCreator.notifyUser("Your package will be delivered today.");
 })();
+```
+
+## Test
+
+```bash
+// Clone of course
+npm i --verbose
+npx mocha --fgrep 'Factory Method Test'
 ```

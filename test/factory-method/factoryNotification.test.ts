@@ -3,7 +3,7 @@ import { expect } from "chai";
 
 import { iFactoryNotification, FactoryEmailNotificationCreator, FactorySMSNotificationCreator } from "../../src/factory-method/factory-method";
 
-describe("Factory Notification System", () => {
+describe("Factory Method Test - Notification System", () => {
   let consoleSpy: sinon.SinonSpy;
 
   beforeEach(() => {
