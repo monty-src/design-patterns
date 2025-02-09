@@ -3,6 +3,7 @@
 
 ## [Factory Method](./src/factory-method/README.md)
 
+```bash
 📦 src/factoory-method
  ┣ 📂 images
  ┣ 📜 factory-method.ts
@@ -10,3 +11,4 @@
 📦 test/factoory-method
  ┣ 📜 factoryMethod.test.ts
  ┣ 📜 factoryNotification.test.ts
+```
