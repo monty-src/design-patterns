@@ -20,11 +20,12 @@ npm run test:abstract-factory
 
 ### Key Points
 
-- :white_check_mark: **Abstract Factory:** Declares an interface for operations that create abstract products.
-- :white_check_mark: **Concrete Factory:** Implements the operations to create concrete product objects.
-- :white_check_mark: **Abstract Product:** Declares an interface for a type of product object.
-- :white_check_mark: **Concrete Product:** Defines a product object to be created by the corresponding concrete factory.
-- :white_check_mark: **Client:** Uses only interfaces declared by the abstract factory and concrete factory.
+- :white_check_mark: **Creates families of related objects** without specifying their concrete classes.
+- :white_check_mark: **Encapsulates object creation logic**, keeping it separate from business logic.
+- :white_check_mark: **Ensures compatibility** by producing objects that work well together.
+- :white_check_mark: **Improves flexibility**, allowing new variations without modifying existing code.
+- :white_check_mark: **Prevents code duplication** by centralizing instantiation in a single factory.
+- :white_check_mark: **Real-world analogy:** A restaurant kitchen—customers order meals without needing to - know who the chef is or how the food is prepared.
 
 ## Benefits
 
@@ -35,11 +36,13 @@ npm run test:abstract-factory
 
 ## Drawbacks
 
-- :no_entry_sign: **Complexity:** The abstract factory pattern can be more complex than other patterns, such as the factory method pattern.
-- :no_entry_sign: **Performance:** The abstract factory pattern can be slower than other patterns, such as the factory method pattern.
-- :no_entry_sign: **Memory:** The abstract factory pattern can use more memory than other patterns, such as the factory method pattern.
-- :no_entry_sign: **Complexity:** The abstract factory pattern can be more complex than other patterns, such as the factory method pattern.
-- :no_entry_sign: **Performance:** The abstract factory pattern can be slower than other patterns, such as the factory method pattern.
+- **Increased Complexity** – This pattern introduces multiple factory classes and abstract interfaces, which can make the codebase more complex and harder to navigate.
+- **Difficult to Modify or Extend** – Adding new product types requires modifying the factory interface and all concrete factory implementations, which can lead to a ripple effect across the code.
+- **Potential Code Duplication** – Since each factory must implement the creation of specific product families, there could be repeated logic across different factory implementations.
+- **Rigid Structure** – If the product variations are not well-defined in advance, this pattern can be too restrictive and require frequent changes when new types of products need to be introduced.
+- **Increased Maintenance Effort** – More classes and interfaces mean more files to maintain, which could slow down development, especially for small-scale projects where a simpler approach would suffice.
+- **Not Always Necessary** – In cases where only a few objects need to be created, using an abstract factory may be overkill compared to simpler approaches like factory methods or direct instantiation.
+
 
 ## Example
 
