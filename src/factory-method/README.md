@@ -190,5 +190,5 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
 
 ```bash
 npm i --verbose
-npx mocha --fgrep 'Factory Method Test'
+npm run test:factory-method
 ```

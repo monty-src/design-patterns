@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "mocha"
+    "test": "mocha",
+    "test:factory-method": "mocha --fgrep 'Factory Method Test'"
   },
   "keywords": [],
   "author": "",
