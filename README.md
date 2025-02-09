@@ -9,6 +9,7 @@
 ```bash
 git clone git@github.com:monty-src/design-patterns.git
 cd design-patterns && npm i --verbose
+npm test
 ```
 
 ## Table of Contents
@@ -18,6 +19,7 @@ cd design-patterns && npm i --verbose
 
 - :factory: [Factory Method](./src/factory-method/README.md): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 - :factory: [Abstract Factory](./src/abstract-factory/README.md): is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+- :house: [Builder](./src/builder/README.md): is a design pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 
 ---
 
@@ -90,7 +92,7 @@ classDiagram
 📦 src/abstract-factory
  ┣ 📜 abstract-factory.ts
  ┣ 📜 README.md
-📦 test/abstract-method
+📦 test/abstract-factory
  ┣ 📜 abstractFactory.test.ts
 ```
 
@@ -154,5 +156,72 @@ classDiagram
     ModernNotificationFactory --> ModernSMSNotification
     VintageNotificationFactory --> VintageEmailNotification
     VintageNotificationFactory --> VintageSMSNotification
+
+```
+
+## [Builder](./src/builder/README.md)
+
+#### File Structure
+
+```bash
+📦 src/builder
+ ┣ 📜 builder.ts
+ ┣ 📜 README.md
+📦 test/builder
+ ┣ 📜 builder.test.ts
+```
+
+#### Test
+
+```bash
+npm run test:builder
+```
+
+```mermaid
+classDiagram
+    class iNotification {
+        <<abstract>>
+        +send(message: string): void
+    }
+
+    class EmailNotification {
+        +send(message: string): void
+    }
+
+    class SMSNotification {
+        +send(message: string): void
+    }
+
+    class NotificationBuilder {
+        <<interface>>
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    class EmailNotificationBuilder {
+        -recipient: string
+        -subject: string
+        -message: string
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    class SMSNotificationBuilder {
+        -recipient: string
+        -message: string
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this // Throws Error
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    iNotification <|-- EmailNotification
+    iNotification <|-- SMSNotification
+    NotificationBuilder <|.. EmailNotificationBuilder
+    NotificationBuilder <|.. SMSNotificationBuilder
 
 ```

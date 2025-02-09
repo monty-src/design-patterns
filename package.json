@@ -8,7 +8,8 @@
     "start": "ts-node src/index.ts",
     "test": "mocha",
     "test:factory-method": "mocha --fgrep 'Factory Method Test'",
-    "test:abstract-factory": "mocha --fgrep 'Abstract Factory Test'"
+    "test:abstract-factory": "mocha --fgrep 'Abstract Factory Test'",
+    "test:builder": "mocha --fgrep 'Builder Test'"
   },
   "keywords": [],
   "author": "",

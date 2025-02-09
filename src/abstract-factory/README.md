@@ -6,7 +6,7 @@
 📦 src/abstract-factory
  ┣ 📜 abstract-factory.ts
  ┣ 📜 README.md
-📦 test/abstract-method
+📦 test/abstract-factory
  ┣ 📜 abstractFactory.test.ts
 ```
 

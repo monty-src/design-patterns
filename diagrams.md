@@ -6,6 +6,7 @@
 
 - :factory: [Factory Method](#factory-method): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 - :factory: [Abstract Factory](#abstract-factory): is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+- :house: [Builder](./src/builder/README.md): is a design pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 
 ## Creational Patterns
 
@@ -106,5 +107,56 @@ classDiagram
     ModernNotificationFactory --> ModernSMSNotification
     VintageNotificationFactory --> VintageEmailNotification
     VintageNotificationFactory --> VintageSMSNotification
+
+```
+
+### [Builder](./src/builder/README.md)
+
+```mermaid
+classDiagram
+    class iNotification {
+        <<abstract>>
+        +send(message: string): void
+    }
+
+    class EmailNotification {
+        +send(message: string): void
+    }
+
+    class SMSNotification {
+        +send(message: string): void
+    }
+
+    class NotificationBuilder {
+        <<interface>>
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    class EmailNotificationBuilder {
+        -recipient: string
+        -subject: string
+        -message: string
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    class SMSNotificationBuilder {
+        -recipient: string
+        -message: string
+        +setRecipient(recipient: string): this
+        +setSubject(subject: string): this // Throws Error
+        +setMessage(message: string): this
+        +build(): iNotification
+    }
+
+    iNotification <|-- EmailNotification
+    iNotification <|-- SMSNotification
+    NotificationBuilder <|.. EmailNotificationBuilder
+    NotificationBuilder <|.. SMSNotificationBuilder
 
 ```
