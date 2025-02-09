@@ -35,7 +35,7 @@
 
 ### Architecture Snippet
 
-[Mermaid Live Editor](https://mermaid.live/){:target="_blank"}
+<a href="https://mermaid.live/" target="_blank">Mermaid Live Editor</a>
 
 ```bash
 classDiagram
