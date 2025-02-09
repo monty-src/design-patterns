@@ -29,7 +29,16 @@
 
 [Mermaid Live Editor](https://mermaid.live/)
 
-### Diagram
+
+### Architecture Diagram
+
+<p align="center">
+  
+  ![Factory Method](./images/mermaid.png)
+
+</p>
+
+### Architecture Snippet
 
 ```bash
 classDiagram
@@ -70,12 +79,6 @@ classDiagram
     FactorySMSNotificationCreator --> FactorySMSNotification : creates
 
 ```
-
-<p align="center">
-  
-  ![Factory Method](./images/mermaid.png)
-
-</p>
 
 
 ## Snippet
