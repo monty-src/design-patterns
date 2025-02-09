@@ -8,9 +8,7 @@
 
 ## Creational Patterns
 
-### Factory Method
-
-[Factory Method - Source](./src/factory-method/README.md)
+### [Factory Method]((./src/factory-method/README.md))
 
 ```mermaid
 classDiagram
