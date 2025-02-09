@@ -35,6 +35,15 @@
 ### Architecture Snippet
 
 [Mermaid Live Editor](https://mermaid.live/)
+
+````md
+```mermaid
+pie
+"Movies" : 80
+"TV shows" : 20
+```
+````
+
 ````md
 ```mermaid
 classDiagram
