@@ -29,13 +29,13 @@
 
 <p align="center">
   
-  ![Factory Method](./images/mermaid.png){:target="_blank"}
+  ![Factory Method](./images/mermaid.png)
 
 </p>
 
 ### Architecture Snippet
 
-[Mermaid Live Editor](https://mermaid.live/)
+[Mermaid Live Editor](https://mermaid.live/){:target="_blank"}
 
 ```bash
 classDiagram
