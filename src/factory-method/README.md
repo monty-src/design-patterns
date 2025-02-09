@@ -27,8 +27,9 @@
 
 ### Mermaid
 
-```mermaid
-```mermaid
+[Mermaid Live Editor](https://mermaid.live/)
+
+```bash
 classDiagram
     class iFactoryNotification {
         <<interface>>
