@@ -1,6 +1,9 @@
 
 # My Design Patterns Notes
 
+> [!IMPORTANT]
+> My personal notes and deep dive on the following [Design Patterns](https://refactoring.guru/design-patterns/catalog)
+
 ## [Factory Method](./src/factory-method/README.md)
 
 ```bash
@@ -16,6 +19,7 @@
 npm i --verbose
 npx mocha --fgrep 'Factory Method Test'
 ```
+
 
 ```mermaid
 classDiagram
