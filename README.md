@@ -6,11 +6,13 @@
 
 ## Table of Contents
 
-- :factory: [Factory Method](./src/factory-method/README.md)
+- :factory: [Factory Method](./src/factory-method/README.md): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 
-## [Factory Method](./src/factory-method/README.md) - is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
+## [Factory Method](./src/factory-method/README.md)
 
 ---
+
+#### File Structure
 
 ```bash
 📦 src/factory-method
@@ -21,10 +23,11 @@
  ┣ 📜 factoryNotification.test.ts
 ```
 
+#### Test
+
 ```bash
 npm run test:factory-method
 ```
-
 
 ```mermaid
 classDiagram
