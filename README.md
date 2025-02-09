@@ -4,6 +4,13 @@
 > [!IMPORTANT]
 > My personal notes and deep dive on the following [Design Patterns](https://refactoring.guru/design-patterns/catalog)
 
+#### Clone & Install
+
+```bash
+git clone git@github.com:monty-src/design-patterns.git
+cd design-patterns && npm i --verbose
+```
+
 ## Table of Contents
 
 - :factory: [Factory Method](./src/factory-method/README.md): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
