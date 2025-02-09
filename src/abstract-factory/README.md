@@ -36,12 +36,12 @@ npm run test:abstract-factory
 
 ## Drawbacks
 
-- **Increased Complexity** – This pattern introduces multiple factory classes and abstract interfaces, which can make the codebase more complex and harder to navigate.
-- **Difficult to Modify or Extend** – Adding new product types requires modifying the factory interface and all concrete factory implementations, which can lead to a ripple effect across the code.
-- **Potential Code Duplication** – Since each factory must implement the creation of specific product families, there could be repeated logic across different factory implementations.
-- **Rigid Structure** – If the product variations are not well-defined in advance, this pattern can be too restrictive and require frequent changes when new types of products need to be introduced.
-- **Increased Maintenance Effort** – More classes and interfaces mean more files to maintain, which could slow down development, especially for small-scale projects where a simpler approach would suffice.
-- **Not Always Necessary** – In cases where only a few objects need to be created, using an abstract factory may be overkill compared to simpler approaches like factory methods or direct instantiation.
+- - :no_entry_sign: **Increased Complexity** – This pattern introduces multiple factory classes and abstract interfaces, which can make the codebase more complex and harder to navigate.
+- - :no_entry_sign: **Difficult to Modify or Extend** – Adding new product types requires modifying the factory interface and all concrete factory implementations, which can lead to a ripple effect across the code.
+- - :no_entry_sign: **Potential Code Duplication** – Since each factory must implement the creation of specific product families, there could be repeated logic across different factory implementations.
+- - :no_entry_sign: **Rigid Structure** – If the product variations are not well-defined in advance, this pattern can be too restrictive and require frequent changes when new types of products need to be introduced.
+- - :no_entry_sign: **Increased Maintenance Effort** – More classes and interfaces mean more files to maintain, which could slow down development, especially for small-scale projects where a simpler approach would suffice.
+- - :no_entry_sign: **Not Always Necessary** – In cases where only a few objects need to be created, using an abstract factory may be overkill compared to simpler approaches like factory methods or direct instantiation.
 
 
 ## Example
