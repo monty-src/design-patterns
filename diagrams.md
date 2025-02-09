@@ -2,13 +2,15 @@
 
 ## Table of Contents
 
-### Creational patterns
+### Creational Patterns
 
 - :factory: [Factory Method](#factory-method): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 
 ## Creational Patterns
 
 ### Factory Method
+
+[Factory Method - Source](./src/factory-method/README.md)
 
 ```mermaid
 classDiagram

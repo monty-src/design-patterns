@@ -14,7 +14,7 @@ cd design-patterns && npm i --verbose
 ## Table of Contents
 
 
-### Creational patterns
+### Creational Patterns
 
 - :factory: [Factory Method](./src/factory-method/README.md): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 
