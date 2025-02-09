@@ -24,19 +24,6 @@
 
 ## Class Architecture
 
-### Architecture Diagram
-
-<p align="center">
-  
-  ![Factory Method](./images/mermaid.png)
-
-</p>
-
-### Architecture Snippet
-
-[Mermaid Live Editor](https://mermaid.live/)
-
-
 ```mermaid
 classDiagram
   class iFactoryNotification {
