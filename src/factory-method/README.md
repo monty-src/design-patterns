@@ -36,55 +36,50 @@
 
 [Mermaid Live Editor](https://mermaid.live/)
 
-````md
 ```mermaid
 pie
 "Movies" : 80
 "TV shows" : 20
 ```
-````
 
-````md
 ```mermaid
 classDiagram
-    class iFactoryNotification {
-        <<interface>>
-        +send(message: string): void
-    }
+  class iFactoryNotification {
+    <<interface>>
+    +send(message: string): void
+  }
 
-    class FactoryNotificationCreatorFactory {
-        <<abstract>>
-        +createNotification(): iFactoryNotification
-        +notifyUser(message: string): void
-    }
+  class FactoryNotificationCreatorFactory {
+    <<abstract>>
+    +createNotification(): iFactoryNotification
+    +notifyUser(message: string): void
+  }
 
-    class FactoryEmailNotification {
-        +send(message: string): void
-    }
+  class FactoryEmailNotification {
+    +send(message: string): void
+  }
 
-    class FactoryEmailNotificationCreator {
-        +createNotification(): iFactoryNotification
-    }
+  class FactoryEmailNotificationCreator {
+    +createNotification(): iFactoryNotification
+  }
 
-    class FactorySMSNotification {
-        +send(message: string): void
-    }
+  class FactorySMSNotification {
+    +send(message: string): void
+  }
 
-    class FactorySMSNotificationCreator {
-        +createNotification(): iFactoryNotification
-    }
+  class FactorySMSNotificationCreator {
+    +createNotification(): iFactoryNotification
+  }
 
-    iFactoryNotification <|-- FactoryEmailNotification
-    iFactoryNotification <|-- FactorySMSNotification
+  iFactoryNotification <|-- FactoryEmailNotification
+  iFactoryNotification <|-- FactorySMSNotification
 
-    FactoryNotificationCreatorFactory <|-- FactoryEmailNotificationCreator
-    FactoryNotificationCreatorFactory <|-- FactorySMSNotificationCreator
+  FactoryNotificationCreatorFactory <|-- FactoryEmailNotificationCreator
+  FactoryNotificationCreatorFactory <|-- FactorySMSNotificationCreator
 
-    FactoryEmailNotificationCreator --> FactoryEmailNotification : creates
-    FactorySMSNotificationCreator --> FactorySMSNotification : creates
-
+  FactoryEmailNotificationCreator --> FactoryEmailNotification : creates
+  FactorySMSNotificationCreator --> FactorySMSNotification : creates
 ```
-````
 
 ## Code - Snippet
 
