@@ -1,1 +1,1 @@
-import './design-patterns/factory-method';
+import './design-patterns/factory-method/factory-method';

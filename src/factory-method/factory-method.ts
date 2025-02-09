@@ -1,14 +1,4 @@
 /**
- * Factory Method
- * 
- * 
- * 
- * 
- * 
- * 
- */
-
-/**
  * Factory Notification
  * 
  * 
@@ -100,7 +90,6 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
     return new FactorySMSNotification();
   }
 }
-
 
 (() => {
   const emailCreator = new FactoryEmailNotificationCreator();
