@@ -14,10 +14,14 @@
 
 ### Benefits
 
-- **Decoupling:** Separates product creation from the main business logic.
-- **Flexibility:** New product types can be introduced without modifying existing code.
-- **Encapsulation:** The client code relies on the factory method rather than directly instantiating objects.
+- :white_check_mark: **Decoupling:** Separates product creation from the main business logic.
+- :white_check_mark: **Flexibility:** New product types can be introduced without modifying existing code.
+- :white_check_mark: **Encapsulation:** The client code relies on the factory method rather than directly instantiating objects.
 
+### Drawbacks
+1. :no_entry_sign: **You want to manage object creation centrally:** If your codebase needs to create objects that might have a variety of implementations, but you want to centralize their creation logic, the Factory Method allows you to do this without altering client code.
+2. :no_entry_sign: **You want to allow for future changes:** If you're designing a system that might need to handle new types of objects in the future, the Factory Method gives you the flexibility to introduce those changes without modifying existing client code.
+3. :no_entry_sign: **You want to reduce complexity:** The Factory Method provides a way to isolate the complex logic of creating objects in one place, making your client code cleaner and easier to maintain.
 
 ## Snippet
 
