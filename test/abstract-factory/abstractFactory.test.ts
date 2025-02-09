@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import { ModernNotificationFactory, VintageNotificationFactory, ModernEmailNotification, ModernSMSNotification, VintageEmailNotification, VintageSMSNotification } from "../../src/abstract-factory/abstract-factory";
 
-describe("Notification Factory Pattern", function () {
+describe("Abstract Factory Test - Design Pattern", function () {
   let consoleStub: sinon.SinonSpy;
 
   beforeEach(() => {
