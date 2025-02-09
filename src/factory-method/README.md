@@ -25,20 +25,17 @@
 
 ## Class Architecture
 
-### Mermaid
-
-[Mermaid Live Editor](https://mermaid.live/)
-
-
 ### Architecture Diagram
 
 <p align="center">
   
-  ![Factory Method](./images/mermaid.png)
+  ![Factory Method](./images/mermaid.png){:target="_blank"}
 
 </p>
 
 ### Architecture Snippet
+
+[Mermaid Live Editor](https://mermaid.live/)
 
 ```bash
 classDiagram
@@ -81,7 +78,7 @@ classDiagram
 ```
 
 
-## Snippet
+## Code - Snippet
 
 ```ts
 /**
