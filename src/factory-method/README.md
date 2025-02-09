@@ -35,7 +35,7 @@
 ### Architecture Snippet
 
 [Mermaid Live Editor](https://mermaid.live/)
-```md
+````md
 ```mermaid
 classDiagram
     class iFactoryNotification {
@@ -75,7 +75,7 @@ classDiagram
     FactorySMSNotificationCreator --> FactorySMSNotification : creates
 
 ```
-```
+````
 
 ## Code - Snippet
 
@@ -203,7 +203,6 @@ class FactorySMSNotificationCreator extends FactoryNotificationCreatorFactory {
 ## Test
 
 ```bash
-// Clone of course
 npm i --verbose
 npx mocha --fgrep 'Factory Method Test'
 ```
