@@ -91,8 +91,7 @@ classDiagram
  ┣ 📜 abstract-factory.ts
  ┣ 📜 README.md
 📦 test/abstract-method
- ┣ 📜 abstractMethod.test.ts
- ┣ 📜 abstractNotification.test.ts
+ ┣ 📜 abstractFactory.test.ts
 ```
 
 #### Test

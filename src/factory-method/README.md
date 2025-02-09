@@ -19,7 +19,6 @@
 npm run test:factory-method
 ```
 
-
 ## Breakdown
 
 ### Key Points

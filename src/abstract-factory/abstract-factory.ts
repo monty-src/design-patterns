@@ -50,7 +50,7 @@ abstract class NotificationFactory {
  * 
  * @class
  */
-class ModernEmailNotification extends EmailNotification {
+export class ModernEmailNotification extends EmailNotification {
   send(message: string): void {
     console.log(`Sending MODERN EMAIL notification: ${message}`);
   }
@@ -61,7 +61,7 @@ class ModernEmailNotification extends EmailNotification {
  * 
  * @class
  */
-class ModernSMSNotification extends SMSNotification {
+export class ModernSMSNotification extends SMSNotification {
   send(message: string): void {
     console.log(`Sending MODERN SMS notification: ${message}`);
   }
@@ -72,7 +72,7 @@ class ModernSMSNotification extends SMSNotification {
  * 
  * @class
  */
-class ModernNotificationFactory extends NotificationFactory {
+export class ModernNotificationFactory extends NotificationFactory {
   /**
    * Creates a modern email notification.
    * 
@@ -97,7 +97,7 @@ class ModernNotificationFactory extends NotificationFactory {
  * 
  * @class
  */
-class VintageEmailNotification extends EmailNotification {
+export class VintageEmailNotification extends EmailNotification {
   /**
    * Sends a message.
    * 
@@ -113,7 +113,7 @@ class VintageEmailNotification extends EmailNotification {
  * 
  * @class
  */
-class VintageSMSNotification extends SMSNotification {
+export class VintageSMSNotification extends SMSNotification {
   /**
    * Sends a message.
    * 
@@ -129,7 +129,7 @@ class VintageSMSNotification extends SMSNotification {
  * 
  * @class
  */
-class VintageNotificationFactory extends NotificationFactory {
+export class VintageNotificationFactory extends NotificationFactory {
   /**
    * Creates a vintage email notification.
    * 
