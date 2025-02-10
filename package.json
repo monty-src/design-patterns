@@ -10,7 +10,8 @@
     "test:factory-method": "mocha --fgrep 'Factory Method Test'",
     "test:abstract-factory": "mocha --fgrep 'Abstract Factory Test'",
     "test:builder": "mocha --fgrep 'Builder Test'",
-    "test:prototype": "mocha --fgrep 'Prototype Test'"
+    "test:prototype": "mocha --fgrep 'Prototype Test'",
+    "test:singleton": "mocha --fgrep 'Singleton Test'"
   },
   "keywords": [],
   "author": "",

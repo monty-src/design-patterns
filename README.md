@@ -24,7 +24,7 @@ npm test
 
 
 > [!NOTE]
-> [All diagrams](./diagrams.md)
+> [All Diagrams](./diagrams.md)
 
 
 ## [Factory Method](./src/factory-method/README.md)

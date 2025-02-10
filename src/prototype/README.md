@@ -20,38 +20,29 @@ npm run test:prototype
 ## Breakdown
 
 ### Key Points
-- Uses a `clone()` method to duplicate objects.
-- Avoids repetitive instantiation logic.
-- Works well with objects that have many configurations.
-- Helps maintain performance by reducing creation overhead.
+- :white_check_mark: Uses a `clone()` method to duplicate objects.
+- :white_check_mark: Avoids repetitive instantiation logic.
+- :white_check_mark: Works well with objects that have many configurations.
+- :white_check_mark: Helps maintain performance by reducing creation overhead.
 
 ### Benefits
-- **Performance Boost** – Cloning is faster than re-instantiating complex objects.
-- **Simplifies Object Creation** – Reduces dependency on constructors.
-- **Preserves Object State** – Ensures consistency across instances.
-- **Encourages Loose Coupling** – Reduces reliance on specific classes.
+- :white_check_mark: **Performance Boost** – Cloning is faster than re-instantiating complex objects.
+- :white_check_mark: **Simplifies Object Creation** – Reduces dependency on constructors.
+- :white_check_mark: **Preserves Object State** – Ensures consistency across instances.
+- :white_check_mark: **Encourages Loose Coupling** – Reduces reliance on specific classes.
 
 ### Drawbacks
 
-#### Complexity in Cloning
-- Deep copying can be tricky, especially with nested objects.
-- Requires careful handling of references to avoid unintended sharing.
-
-#### Increased Maintenance
-- If object structure changes, clone() logic must be updated.
-- More effort is needed to ensure correct copying behavior.
-
-#### Hidden Dependencies
-- Cloning can obscure dependencies, making debugging harder.
-- Developers might overlook what gets copied versus referenced.
-
-#### Memory Overhead
-- Cloning large objects can lead to unnecessary memory usage.
-- Risk of creating excessive objects if not managed properly.
-
-#### Not Always Necessary
-- If object creation is cheap, the pattern adds unnecessary complexity.
-- In some cases, a factory or constructor is a simpler alternative
+- :no_entry_sign: **Complexity in Cloning** – Deep copying can be tricky, especially with nested objects.
+- :no_entry_sign: **Requires careful handling of references to avoid unintended sharing.**
+- :no_entry_sign: If object structure changes, clone() logic must be updated.
+- :no_entry_sign: More effort is needed to ensure correct copying behavior.
+- :no_entry_sign: Cloning can obscure dependencies, making debugging harder.
+- :no_entry_sign: Developers might overlook what gets copied versus referenced.
+- :no_entry_sign: Cloning large objects can lead to unnecessary memory usage.
+- :no_entry_sign: Risk of creating excessive objects if not managed properly.
+- :no_entry_sign: If object creation is cheap, the pattern adds unnecessary complexity.
+- :no_entry_sign: In some cases, a factory or constructor is a simpler alternative
 
 
 
