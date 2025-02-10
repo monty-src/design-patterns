@@ -8,6 +8,7 @@
 - :factory: [Abstract Factory](#abstract-factory): is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 - :house: [Builder](./src/builder/README.md): is a design pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 - :repeat_one: [Prototype](./src/prototype/README.md): is a design pattern that allows you to create new objects by cloning existing ones, rather than instantiating new objects from scratch.
+- :lock: [Singleton](./src/singleton/README.md): is a design pattern that ensures a class has only one instance and provides a global point of access to it.
 
 ## Creational Patterns
 
