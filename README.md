@@ -23,9 +23,8 @@ npm test
 - :repeat_one: [Prototype](./src/prototype/README.md): is a design pattern that allows you to create new objects by cloning existing ones, rather than instantiating new objects from scratch.
 
 
----
-
-[All diagrams](./diagrams.md)
+> [!NOTE]
+> [All diagrams](./diagrams.md)
 
 
 ## [Factory Method](./src/factory-method/README.md)
