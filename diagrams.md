@@ -7,6 +7,7 @@
 - :factory: [Factory Method](#factory-method): is a design pattern that simplifies object creation by providing a centralized place to instantiate different types of objects, making your code more flexible and easier to manage.
 - :factory: [Abstract Factory](#abstract-factory): is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 - :house: [Builder](./src/builder/README.md): is a design pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+- :repeat_one: [Prototype](./src/prototype/README.md): is a design pattern that allows you to create new objects by cloning existing ones, rather than instantiating new objects from scratch.
 
 ## Creational Patterns
 
@@ -158,5 +159,42 @@ classDiagram
     iNotification <|-- SMSNotification
     NotificationBuilder <|.. EmailNotificationBuilder
     NotificationBuilder <|.. SMSNotificationBuilder
+
+```
+
+### [Prototype](./src/prototype/README.md)
+
+```mermaid
+classDiagram
+  class iNotification {
+    <<interface>>
+    +clone() iNotification
+    +send() void
+  }
+
+  class EmailNotification {
+    +recipient: string
+    +subject: string
+    +body: string
+    +clone() iNotification
+    +send() void
+  }
+
+  class SMSNotification {
+    +phoneNumber: string
+    +message: string
+    +clone() iNotification
+    +send() void
+  }
+
+  class NotificationManager {
+    -prototypes: Record<string, iNotification>
+    +registerPrototype(type: string, prototype: iNotification) void
+    +createNotification(type: string) iNotification
+  }
+
+  iNotification <|.. EmailNotification
+  iNotification <|.. SMSNotification
+  NotificationManager --> iNotification : manages
 
 ```

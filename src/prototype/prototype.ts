@@ -14,7 +14,7 @@ interface iNotification {
  * @class
  * @implements {iNotification}
  */
-class EmailNotification implements iNotification {
+export class EmailNotification implements iNotification {
   /**
    * 
    * @param {string} recipient 
@@ -53,7 +53,7 @@ class EmailNotification implements iNotification {
  * @class
  * @implements {iNotification}
  */
-class SMSNotification implements iNotification {
+export class SMSNotification implements iNotification {
   /**
    * 
    * @param {string} phoneNumber 
@@ -88,7 +88,7 @@ class SMSNotification implements iNotification {
  * 
  * @class
  */
-class NotificationManager {
+export class NotificationManager {
   /**
    * Prototypes
    * 
