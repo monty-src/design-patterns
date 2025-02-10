@@ -46,9 +46,106 @@ npm run test:singleton
 ### Class Architecture
 
 ```mermaid
+classDiagram
+    class Notification {
+        <<interface>>
+        +clone() Notification
+        +send() void
+    }
+
+    class EmailNotification {
+        -String recipient
+        -String subject
+        -String body
+        +clone() Notification
+        +send() void
+    }
+
+    class SMSNotification {
+        -String phoneNumber
+        -String message
+        +clone() Notification
+        +send() void
+    }
+
+    class NotificationManager {
+        -prototypes: Map<String, Notification>
+        +registerPrototype(type: String, prototype: Notification): void
+        +createNotification(type: String): Notification
+    }
+
+    class NotificationService {
+        -static instance: NotificationService
+        -constructor() private
+        +static getInstance(): NotificationService
+        +sendNotification(notification: Notification): void
+    }
+
+    Notification <|.. EmailNotification
+    Notification <|.. SMSNotification
+    NotificationManager --> Notification : manages
+    NotificationService --> Notification : sends
+
 ```
 
 ### Code - Snippet
 
 ```typescript
+interface INotification {
+  send(): void;
+}
+
+/**
+ * Notification Service
+ * 
+ * @class NotificationService
+ * @description A singleton class for sending notifications
+ */
+export class NotificationService {
+  /**
+   * Instance
+   * 
+   * @private
+   * @static
+   * @type {NotificationService}
+   */
+  private static instance: NotificationService;
+
+  /**
+   * Constructor
+   * 
+   * @private
+   */
+  private constructor() {
+    console.log('NotificationService initialized');
+  }
+
+  /**
+   * Get Instance
+   * 
+   * @static
+   * @returns {NotificationService}
+   */
+  static getInstance(): NotificationService {
+    if (!NotificationService.instance) {
+      NotificationService.instance = new NotificationService();
+    }
+    return NotificationService.instance;
+  }
+
+  /**
+   * Send Notification
+   * 
+   * @param {Notification} notification
+   */
+  sendNotification(notification: INotification): void {
+    notification.send();
+  }
+}
+
+(() => {
+  // Step 5: Using the Singleton
+  const notificationService1 = NotificationService.getInstance();
+  const notificationService2 = NotificationService.getInstance();
+})();
 ```

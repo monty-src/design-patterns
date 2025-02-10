@@ -1,4 +1,4 @@
-export interface INotification {
+interface INotification {
   send(): void;
 }
 
