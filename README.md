@@ -23,6 +23,8 @@ npm test
 - :repeat_one: [Prototype](./src/prototype/README.md): is a design pattern that allows you to create new objects by cloning existing ones, rather than instantiating new objects from scratch.
 - :lock: [Singleton](./src/singleton/README.md): is a design pattern that ensures a class has only one instance and provides a global point of access to it.
 
+### Structural Patterns
+
 
 > [!NOTE]
 > [All Diagrams](./diagrams.md)
