@@ -198,3 +198,26 @@ classDiagram
   NotificationManager --> iNotification : manages
 
 ```
+
+### [Singleton](./src/singleton/README.md)
+
+```mermaid
+classDiagram
+    class INotification {
+        <<interface>>
+        +send() void
+    }
+
+    class NotificationService {
+        -static instance: NotificationService
+        -constructor()
+        +static getInstance() NotificationService
+        +sendNotification(notification: INotification) void
+    }
+
+    INotification <|.. MockNotification
+    INotification <|.. EmailNotification
+    INotification <|.. SMSNotification
+    NotificationService --> INotification : Uses
+
+```
