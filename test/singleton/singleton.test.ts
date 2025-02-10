@@ -13,7 +13,7 @@ class MockNotification implements INotification {
   }
 }
 
-describe('NotificationService Singleton', () => {
+describe('Singleton Test', () => {
   it('should return the same instance when getInstance is called multiple times', () => {
     const instance1 = NotificationService.getInstance();
     const instance2 = NotificationService.getInstance();

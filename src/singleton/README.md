@@ -47,44 +47,22 @@ npm run test:singleton
 
 ```mermaid
 classDiagram
-    class Notification {
+    class INotification {
         <<interface>>
-        +clone() Notification
         +send() void
-    }
-
-    class EmailNotification {
-        -String recipient
-        -String subject
-        -String body
-        +clone() Notification
-        +send() void
-    }
-
-    class SMSNotification {
-        -String phoneNumber
-        -String message
-        +clone() Notification
-        +send() void
-    }
-
-    class NotificationManager {
-        -prototypes: Map<String, Notification>
-        +registerPrototype(type: String, prototype: Notification): void
-        +createNotification(type: String): Notification
     }
 
     class NotificationService {
         -static instance: NotificationService
-        -constructor() private
-        +static getInstance(): NotificationService
-        +sendNotification(notification: Notification): void
+        -constructor()
+        +static getInstance() NotificationService
+        +sendNotification(notification: INotification) void
     }
 
-    Notification <|.. EmailNotification
-    Notification <|.. SMSNotification
-    NotificationManager --> Notification : manages
-    NotificationService --> Notification : sends
+    INotification <|.. MockNotification
+    INotification <|.. EmailNotification
+    INotification <|.. SMSNotification
+    NotificationService --> INotification : Uses
 
 ```
 

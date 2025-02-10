@@ -279,3 +279,42 @@ classDiagram
   NotificationManager --> iNotification : manages
 
 ```
+
+## [Singleton](./src/singleton/README.md)
+
+#### File Structure
+
+```bash
+📦 src/singleton
+ ┣ 📜 singleton.ts
+ ┣ 📜 README.md
+📦 test/singleton
+ ┣ 📜 singleton.test.ts
+```
+
+#### Test
+
+```bash
+npm run test:singleton
+```
+
+```mermaid
+classDiagram
+  class INotification {
+      <<interface>>
+      +send() void
+  }
+
+  class NotificationService {
+      -static instance: NotificationService
+      -constructor()
+      +static getInstance() NotificationService
+      +sendNotification(notification: INotification) void
+  }
+
+  INotification <|.. MockNotification
+  INotification <|.. EmailNotification
+  INotification <|.. SMSNotification
+  NotificationService --> INotification : Uses
+
+```
